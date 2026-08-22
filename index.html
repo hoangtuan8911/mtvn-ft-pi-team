@@ -4,10 +4,30 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>MTVN Field Tech PI Team</title>
-    <style>html,body,#root{height:100%;margin:0;overflow:hidden}.recharts-legend-wrapper{max-height:100%}</style>
+    <style>
+      html,body,#root{height:100%;margin:0;overflow:hidden}
+      .recharts-legend-wrapper{max-height:100%}
+      @media (max-width:768px){
+        html,body,#root{width:100%;overflow-x:hidden}
+        img,svg,canvas,.recharts-wrapper,.recharts-responsive-container{max-width:100%!important}
+        [style*="grid-template-columns: 1fr 2fr"],
+        [style*="grid-template-columns: 1.15fr 0.85fr"],
+        [style*="grid-template-columns: 1.2fr 1.4fr"],
+        [style*="grid-template-columns: 220px 240px 1fr"]{
+          grid-template-columns:minmax(0,1fr)!important;
+          gap:10px!important
+        }
+        [style*="min-height: 520px"]{min-height:0!important;height:auto!important}
+        [style*="220px 240px 1fr"]>div{
+          max-height:42vh!important;
+          min-height:160px
+        }
+        .recharts-responsive-container{width:100%!important}
+      }
+    </style>
     <script>window.MT4_DEFAULT_FB={apiKey:"AIzaSyC51IJLmqkG2k4kDeVEWsv8KkebrZ9Xe_M",authDomain:"teamperformance-a5879.firebaseapp.com",databaseURL:"https://teamperformance-a5879-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"teamperformance-a5879",storageBucket:"teamperformance-a5879.firebasestorage.app",messagingSenderId:"376419768304",appId:"1:376419768304:web:01255a76addacc6ba6af35"};</script>
-    <script type="module" crossorigin src="./assets/index-BqJYDW4O.js?v=79"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B0tN6Al5.css?v=79">
+    <script type="module" crossorigin src="./assets/index-BqJYDW4O.js?v=80"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B0tN6Al5.css?v=80">
   </head>
   <body>
     <div id="root"></div>

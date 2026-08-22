@@ -7,33 +7,40 @@
     <style>
       html,body,#root{height:100%;margin:0;overflow:hidden}
       .recharts-legend-wrapper{max-height:100%}
+      .iss-back,.pj-back{display:none}
       @media (max-width:768px){
         html,body,#root{width:100%;overflow-x:hidden}
-        [style*="grid-template-columns: 1fr 2fr"],
-        [style*="grid-template-columns: 1.15fr 0.85fr"],
-        [style*="grid-template-columns: 1.2fr 1.4fr"],
-        [style*="grid-template-columns: 220px 240px 1fr"]{
+        [style*="grid-template-columns: 1fr 2fr"]{
           grid-template-columns:minmax(0,1fr)!important;
           gap:10px!important;
           align-items:start!important
         }
         [style*="min-height: 520px"]{min-height:0!important;height:auto!important}
-        [style*="220px 240px 1fr"]>div{
-          max-height:42vh!important;
-          min-height:160px
-        }
-        /* Charts: phone-only hide. Desktop unchanged. */
         [style*="grid-template-columns: 1fr 2fr"]>div:nth-child(2),
         .recharts-responsive-container,
         .recharts-wrapper,
         .recharts-legend-wrapper{
           display:none!important
         }
+        .iss-wiz,.pj-wiz{
+          grid-template-columns:1fr!important;
+          height:100%!important
+        }
+        .iss-wiz>div,.pj-wiz>div{
+          max-height:none!important;
+          height:100%!important
+        }
+        .iss-back,.pj-back{display:flex!important;align-items:center}
+        .iss-step-cust .iss-col-cases,.iss-step-cust .iss-col-detail,
+        .iss-step-cases .iss-col-cust,.iss-step-cases .iss-col-detail,
+        .iss-step-detail .iss-col-cust,.iss-step-detail .iss-col-cases,
+        .pj-step-list .pj-col-detail,
+        .pj-step-detail .pj-col-list{display:none!important}
       }
     </style>
     <script>window.MT4_DEFAULT_FB={apiKey:"AIzaSyC51IJLmqkG2k4kDeVEWsv8KkebrZ9Xe_M",authDomain:"teamperformance-a5879.firebaseapp.com",databaseURL:"https://teamperformance-a5879-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"teamperformance-a5879",storageBucket:"teamperformance-a5879.firebasestorage.app",messagingSenderId:"376419768304",appId:"1:376419768304:web:01255a76addacc6ba6af35"};</script>
-    <script type="module" crossorigin src="./assets/index-BqJYDW4O.js?v=85"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B0tN6Al5.css?v=85">
+    <script type="module" crossorigin src="./assets/index-BqJYDW4O.js?v=86"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B0tN6Al5.css?v=86">
   </head>
   <body>
     <div id="root"></div>

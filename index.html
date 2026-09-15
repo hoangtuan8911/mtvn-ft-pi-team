@@ -2,14 +2,67 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
     <title>MTVN Field Tech PI Team</title>
     <style>
       html,body,#root{height:100%;margin:0;overflow:hidden}
       .recharts-legend-wrapper{max-height:100%}
       .iss-back,.pj-back{display:none}
       @media (max-width:768px){
-        html,body,#root{width:100%;overflow-x:hidden}
+        html,body,#root{
+          width:100%;
+          height:auto!important;
+          min-height:100%!important;
+          min-height:100dvh!important;
+          overflow-x:hidden!important;
+          overflow-y:auto!important;
+          -webkit-overflow-scrolling:touch
+        }
+        /* Whole app scrolls — header/tabs can scroll away */
+        #root > .app-shell,
+        #root > div{
+          height:auto!important;
+          min-height:100dvh!important;
+          overflow:visible!important
+        }
+        .app-header{
+          position:static!important;
+          flex-wrap:wrap!important;
+          align-items:flex-start!important;
+          padding:6px 8px!important;
+          gap:6px!important
+        }
+        .app-title{
+          font-size:18px!important;
+          line-height:1.2!important
+        }
+        .app-clock{
+          min-width:118px!important;
+          min-height:52px!important;
+          padding:6px 8px!important;
+          gap:2px!important
+        }
+        .app-clock > div:first-child{font-size:11px!important}
+        .app-clock > div:last-child{font-size:16px!important}
+        .app-tabs{
+          position:static!important;
+          padding-left:8px!important;
+          padding-right:8px!important
+        }
+        /* Content is normal flow, not a tiny trapped scroll pane */
+        .app-main{
+          flex:none!important;
+          overflow:visible!important;
+          height:auto!important;
+          max-height:none!important;
+          min-height:60vh!important;
+          padding-bottom:24px!important
+        }
+        .app-chat-panel{
+          height:auto!important;
+          min-height:70vh!important;
+          max-height:none!important
+        }
         [style*="grid-template-columns: 1fr 2fr"]{
           grid-template-columns:minmax(0,1fr)!important;
           gap:10px!important;
@@ -24,11 +77,12 @@
         }
         .iss-wiz,.pj-wiz{
           grid-template-columns:1fr!important;
-          height:100%!important
+          height:auto!important;
+          min-height:70vh!important
         }
         .iss-wiz>div,.pj-wiz>div{
           max-height:none!important;
-          height:100%!important
+          height:auto!important
         }
         .iss-back,.pj-back{display:flex!important;align-items:center}
         .iss-step-cust .iss-col-cases,.iss-step-cust .iss-col-detail,
@@ -38,9 +92,9 @@
         .pj-step-detail .pj-col-list{display:none!important}
       }
     </style>
-    <script>window.MT4_BUILD={lastUpdate:"14-09-2026 09:41 (UTC+7)",copyright:"Copyright by Nick Lai (Lại Hoàng Tuấn)"};window.MT4_DEFAULT_FB={apiKey:"AIzaSyC51IJLmqkG2k4kDeVEWsv8KkebrZ9Xe_M",authDomain:"teamperformance-a5879.firebaseapp.com",databaseURL:"https://teamperformance-a5879-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"teamperformance-a5879",storageBucket:"teamperformance-a5879.firebasestorage.app",messagingSenderId:"376419768304",appId:"1:376419768304:web:01255a76addacc6ba6af35"};</script>
-    <script type="module" crossorigin src="./assets/index-BqJYDW4O.js?v=134"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B0tN6Al5.css?v=134">
+    <script>window.MT4_BUILD={lastUpdate:"15-09-2026 12:15 (UTC+7)",copyright:"Copyright by Nick Lai (Lại Hoàng Tuấn)"};window.MT4_DEFAULT_FB={apiKey:"AIzaSyC51IJLmqkG2k4kDeVEWsv8KkebrZ9Xe_M",authDomain:"teamperformance-a5879.firebaseapp.com",databaseURL:"https://teamperformance-a5879-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"teamperformance-a5879",storageBucket:"teamperformance-a5879.firebasestorage.app",messagingSenderId:"376419768304",appId:"1:376419768304:web:01255a76addacc6ba6af35"};</script>
+    <script type="module" crossorigin src="./assets/index-BqJYDW4O.js?v=135"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B0tN6Al5.css?v=135">
   </head>
   <body>
     <div id="root"></div>

@@ -22,3 +22,7 @@ In Firebase Console → Realtime Database → Rules, publish:
 ```
 
 Or deploy `database.rules.json` from this repo. If Rules block access, the header shows **Cloud bị khóa Rules**. Temporary workaround: Backup JSON on the main PC, then Restore JSON on the other browser before login.
+
+### Upload local Backup JSON to cloud
+
+Admin header button **⬆️ Đẩy file lên Cloud** reads a previously downloaded Backup JSON and writes it to Firebase (`backups/*` + live paths). Requires open Realtime Database Rules. Use this to re-seed cloud from a file kept on your PC (e.g. after data loss).
